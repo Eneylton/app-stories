@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Stories</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-content>
+    <ion-scroll scrollX="true" text-nowrap >
+        <div class="story" text-center *ngFor="let item Of imagens; let i = index" (click)="openStory(i)">
+
+          <img src="../../assets/imgs/{{item}}" alt="Map">
+
+        </div>
+    </ion-scroll>
+  </ion-content>
+
+</ion-content>

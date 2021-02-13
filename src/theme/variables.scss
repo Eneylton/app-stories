@@ -84,5 +84,36 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+//@import "roboto";
+//@import "noto-sans";
+
+@font-face{
+  font-family: 'buda';
+  font-style: 'bold';
+  font-weight: '400';
+src: url(../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
+
+$font-family-base2: "buda";
+
+h1,h2,h3,h4,input,a,p,button,ion-title,span,ion-option {
+
+  font-family: "buda" !important;
+}
+
+
+@font-face{
+  font-family: 'Open Sans';
+  font-style: 'bold';
+  font-weight: '400';
+src: url(../assets/fonts/FontsFree-Net-SFProDisplay-Light.ttf);
+}
+
+$font-family-base: "Open Sans";
+
+h1,h2,h3,h4,input,a,p,button,ion-title,span,ion-option {
+
+  font-family: "Open Sans" !important;
+}
+
+

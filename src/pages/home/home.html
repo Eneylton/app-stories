@@ -1,18 +1,23 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+<ion-header no-border>
+  <ion-navbar transparent>
+ 
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-item no-lines>
+    <h1>Bem-Vindo !</h1>
+    <p>Nosso primeiro app.</p>
+  </ion-item>
+  <ion-item no-lines> 
+    <button ion-button color="danger" round large>Login</button>
+  </ion-item>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-footer>
+    <ion-toolbar>
+      <span style="color: rgb(39, 32, 56);">Você ainda não cadastrado ?</span> <span style="color: crimson;">Cadastre-se.</span>
+    </ion-toolbar>
+  </ion-footer>
+
 </ion-content>

@@ -1,3 +1,35 @@
 page-home {
 
+    ion-content{
+        
+        background-image: url(../../assets/imgs/xd.jpg);
+
+        ion-item{
+            background-color: rgba(0, 0, 0, 0) !important;
+
+            h1{
+                font-size: 40px !important;
+                color:#fff;
+            }
+
+            button{
+                background-image: linear-gradient(to bottom, #9d0029, #b0032f, #c30735, #d70d3b, #eb1241);
+            }
+        }
+
+        // .toolbar-background-md {
+        //     border-color: #b2b2b2;
+        //     background: #ff0000;
+        // }
+
+      
+   
+
+    }
+
+    ion-footer,ion-toolbar {
+        
+            background-color: chocolate !important; 
+   }
+
 }
