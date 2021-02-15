@@ -1,19 +1,76 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Stories</ion-title>
+<ion-header no-border>
+  
+  <ion-navbar transparent>
+    <ion-buttons>
+
+      <button ion-button icon-only >
+  
+        <i class="fas fa-jedi" style="font-size: 25px;padding: 10px;"></i>
+        
+      </button>
+
+    </ion-buttons>
+
+   
+    <ion-buttons end>
+
+      <button ion-button icon-only >
+
+        <i class="fas fa-search" style="font-size: 18px;padding: 10px; font-weight: lighter;"></i>
+        
+      </button>
+      <button ion-button icon-only >
+
+        <i class="fas fa-grip-vertical" style="font-size: 18px;padding: 10px; font-weight: lighter;"></i>
+        
+      </button>
+
+
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-content>
     <ion-scroll scrollX="true" text-nowrap >
         <div class="story" text-center *ngFor="let item Of imagens; let i = index" (click)="openStory(i)">
 
-          <img src="../../assets/imgs/{{item}}" alt="Map">
+          <img src="../../assets/imgs/{{item}}" >
 
         </div>
     </ion-scroll>
-  </ion-content>
+
+
+ <ion-item>
+
+   <ion-label>Produtos Resentes</ion-label>
+
+ </ion-item>
+
+ <ion-grid fixed>
+  <ion-row>
+    <ion-col col-6 *ngFor="let item Of produtos; let i = index">
+     
+      <ion-card>
+
+        <button ion-fab block (click)="check(item.status)" >
+
+          <ion-icon name="heart-outline" *ngIf="status==''"></ion-icon>
+          <ion-icon name="heart" *ngIf="status !=''"></ion-icon>
+
+         
+
+        </button>
+
+        <img src="../../assets/imgs/{{item.foto}}" alt="">
+        <span>
+          {{item.nome}} - {{item.qtd}} - {{item.valor | currency: 'BRL'}} 
+        </span>
+      </ion-card>
+      
+    </ion-col>
+   
+  </ion-row>
+</ion-grid>
 
 </ion-content>

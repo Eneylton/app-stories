@@ -1,6 +1,50 @@
 page-stories {
+   
+  ion-content{
 
-    ion-scroll {
+      background-color: blue !important;
+
+      .card-md {
+        background-color: #ff0000;
+        border-radius: 7px;
+        img{
+            border-radius: 7px 7px 0px 0px;
+            object-fit: cover;  
+            width: 256px;
+            height: 150px;
+        }
+        span{
+            color: rgb(157, 255, 0);
+            font-size: x-small;
+        }
+
+        button{
+            position: absolute;
+            margin-top: 4px;
+            margin-left: 53%;
+            width: 27px;
+            height: 27px;
+            background-color:#0a0327;
+        
+        }
+
+        ion-icon{
+            font-size: small;
+            color: #ff0000;
+            margin-top: 2px;
+            align-items: center;
+        }
+      }
+
+      ion-card{
+          padding: 6px 6px 10px 6px;
+          color:#00ffff;
+          
+         
+      }
+
+
+      ion-scroll {
         height: 100px;
 
         .story{
@@ -21,6 +65,11 @@ page-stories {
             
             }
         }
+
+
+       
  }
 
+  }
+   
 }

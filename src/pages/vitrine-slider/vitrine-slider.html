@@ -1,0 +1,85 @@
+<ion-header no-border>
+  
+  <ion-navbar transparent>
+    <ion-buttons>
+
+      <button ion-button icon-only >
+  
+        <i class="fas fa-jedi" style="font-size: 25px;padding: 10px;"></i>
+        
+      </button>
+
+    </ion-buttons>
+
+   
+    <ion-buttons end>
+
+      <button ion-button icon-only >
+
+        <i class="fas fa-search" style="font-size: 18px;padding: 10px; font-weight: lighter;"></i>
+        
+      </button>
+      <button ion-button icon-only >
+
+        <i class="fas fa-grip-vertical" style="font-size: 18px;padding: 10px; font-weight: lighter;"></i>
+        
+      </button>
+
+
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-scroll scrollX="true" text-nowrap >
+        <div class="story" text-center *ngFor="let item Of imagens; let i = index" (click)="openStory(i)">
+
+          <img src="../../assets/imgs/{{item}}" >
+
+        </div>
+    </ion-scroll>
+
+
+    <ion-item-divider color="secondary">
+      <i style="font-size: x-large; color: #8b0463;" class="fas fa-suitcase-rolling item-start"></i> 
+      <span style="font-size: 16px; padding-left: 7px;">Lançamentos</span>
+      <span item-end>Ver mais</span>
+    </ion-item-divider>
+
+ <ion-grid fixed>
+  <ion-row>
+    <ion-col col-6 *ngFor="let item Of produtos; let i = index">
+     
+      <ion-card>
+
+        <button ion-fab block (click)="check(item.status)" >
+
+          <ion-icon name="heart-outline" *ngIf="status==''"></ion-icon>
+          <ion-icon name="heart" *ngIf="status !=''"></ion-icon>
+
+         
+
+        </button>
+
+        <img src="../../assets/imgs/{{item.foto}}" alt="">
+       
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col col-12><span style="font-size: 15px !important;">{{item.nome}}</span></ion-col>
+            <ion-col col-4><span>{{item.qtd}}</span></ion-col>
+            <ion-col col-8><span item-start>
+              
+              <ion-badge style="padding: 5px;" color="danger" outline>{{item.valor | currency: 'BRL'}}</ion-badge> 
+            </span>
+          </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      
+    </ion-col>
+   
+  </ion-row>
+</ion-grid>
+
+</ion-content>

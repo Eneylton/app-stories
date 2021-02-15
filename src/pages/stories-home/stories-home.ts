@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 
 
 @IonicPage({})
@@ -11,7 +11,7 @@ export class StoriesHomePage {
 
   id: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private modalControl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -21,7 +21,10 @@ export class StoriesHomePage {
 
   openHome(){
 
-    this.navCtrl.setRoot('StoriesPage');
+    let modal = this.modalControl.create('StoriesPage');
+    modal.present();
+
+  
   }
 
 }
